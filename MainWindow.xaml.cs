@@ -16,15 +16,20 @@ namespace deck
 
         PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
 
+        private void pack()
+        {
+            UpdateRam();
+            UpdateCPU();
+            UpdateTime();
+            getFocusedWin();
+        }
+
         public MainWindow()
         {
             InitializeComponent();
             this.Width = SystemParameters.PrimaryScreenWidth;
 
-            UpdateRam();
-            UpdateCPU();
-            UpdateTime();
-            getFocusedWin();
+            pack();
 
             System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
             timer.Tick += Timer_Tick;
@@ -34,10 +39,7 @@ namespace deck
         
         private void Timer_Tick(object? sender, EventArgs e)
         {
-            UpdateRam();
-            UpdateCPU();
-            UpdateTime();
-            getFocusedWin();
+            pack();
         }
 
         private void UpdateRam()
