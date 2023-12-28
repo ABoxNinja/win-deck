@@ -9,6 +9,9 @@
 
     <Grid Background="Black" Height="25">
         <StackPanel Orientation="horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Label x:Name="focusedWindow" Foreground="White"/>
+            <Label x:Name="time" Foreground="White"/>
+            <Label Content="|" Foreground="#505050"/>
             <Label x:Name="ramUsageLabel" Content="RAM: " Foreground="White"/>
             <Label x:Name="cpuUsageLabel" Content="CPU: " Foreground="White"/>
         </StackPanel>
