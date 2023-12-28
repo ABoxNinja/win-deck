@@ -8,6 +8,9 @@
     Title="deck" Height="25" ContentRendered="WindowCentered" WindowStyle="None" ResizeMode="NoResize" Topmost="True">
 
     <Grid Background="Black" Height="25">
-        <Label x:Name="ramUsageLabel" Content="RAM: " HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="White"/>
+        <StackPanel Orientation="horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Label x:Name="ramUsageLabel" Content="RAM: " Foreground="White"/>
+            <Label x:Name="cpuUsageLabel" Content="CPU: " Foreground="White"/>
+        </StackPanel>
     </Grid>
 </Window>
