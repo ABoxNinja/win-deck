@@ -5,8 +5,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:deck"
     mc:Ignorable="d"
-    Title="deck" Height="25" Width="450" ContentRendered="WindowCentered" WindowStyle="None" ResizeMode="NoResize">
+    Title="deck" Height="25" ContentRendered="WindowCentered" WindowStyle="None" ResizeMode="NoResize" Topmost="True">
 
-    <Grid Background="Black" Height="50">
+    <Grid Background="Black" Height="25">
+        <Label x:Name="ramUsageLabel" Content="RAM: " HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="White"/>
     </Grid>
 </Window>
