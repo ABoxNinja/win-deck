@@ -15,7 +15,6 @@ namespace deck
 
 
         PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-        DateTime currentTime = DateTime.Now;
 
         public MainWindow()
         {
@@ -60,6 +59,7 @@ namespace deck
 
         private void UpdateTime()
         {
+            DateTime currentTime = DateTime.Now;
             time.Content = currentTime.ToString();
         }
 
